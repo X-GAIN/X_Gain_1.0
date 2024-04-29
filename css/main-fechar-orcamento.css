@@ -1,0 +1,359 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lista-itens::-webkit-scrollbar{
+    width: 10px;
+}
+/* .lista-itens::-webkit-scrollbar-button{
+    margin: 50px 0;
+} */
+.lista-itens::-webkit-scrollbar-thumb{
+    background-color: var(--Preto);
+}
+.lista-itens::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
+main{
+    margin-top: 120px;
+    min-height: 500px;
+    width: 100%;
+    color: var(--Preto);
+    background-color: var(--bran);
+    font-family: var(--mulish), sans-serif;
+}
+main svg{
+    height: 25px;
+    stroke: var(--Preto);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+main svg:hover{
+    stroke: var(--marr);
+    fill: var(--marr);
+}
+
+    main .section-titulo-main{
+        height: 250px;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        background-color: var(--Preto);
+        color: var(--bran);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+        padding: 30px;
+    }
+        .section-titulo-main h2{
+            font-family: var(--audiowide), sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+        }
+
+    main .main-fechar-orcamento{
+        padding: 0 4vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+        .main-fechar-orcamento h2{
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .main-fechar-orcamento .section-lista-itens{
+            width: 30%;
+        }
+            .section-lista-itens .lista-itens-titulo{
+                display: flex;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+                .lista-itens-titulo i{
+                    margin-left: 5px;
+                    margin-top: 1px;
+                    transition: all .1s ease-in-out;
+                    transform: rotate(0deg);
+                }
+                .lista-itens-titulo i svg{
+                    stroke: var(--Preto);
+                }
+                .lista-itens-titulo:hover, .lista-itens-titulo:hover svg{
+                    color: var(--marr);
+                    stroke: var(--marr);
+                }
+            .section-lista-itens svg{
+                height: 25px;
+                stroke: transparent;
+            }
+            .section-lista-itens .menos-mais svg{
+                transition: all 0.2s ease-in-out;
+            }
+            .section-lista-itens .menos-mais svg path {
+                fill: var(--Preto);
+                transition: 0.2s;
+            }
+            
+            .section-lista-itens .menos-mais svg circle {
+                stroke: var(--Preto);
+                fill: none;
+                transition: 0.2s;
+            }
+            
+            .section-lista-itens .menos-mais:hover svg path {
+                fill: var(--marr);
+            }
+            
+            .section-lista-itens .menos-mais:hover svg circle {
+                stroke: var(--marr);
+            }
+            .section-lista-itens .excluir-produto svg{
+                height: 20px;
+                stroke: transparent;
+            }
+            .section-lista-itens .excluir-produto:hover svg{
+                stroke: transparent;
+            }
+            .section-lista-itens .area-lista-itens{
+                /* border: 1px solid red; */
+                width: 100%;
+                padding: 1vw 20px;
+            }
+                .area-lista-itens .item-lista{
+                    position: relative;
+                    width: 100%;
+                    max-height: 50vh;
+                    overflow-y: auto;
+                    padding-right: 10px;
+                    display: flex;
+                    /* flex-direction: column; */
+                    justify-content: space-between;
+                    align-items: start;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                }
+                .area-lista-itens .item-lista::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    height: 3px;
+                    width: 100%;
+                    background-color: var(--Preto);
+                }
+                    /* .item-lista .qtn-produto{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    } */
+                    .item-lista p{
+                        font-family: var(--mulish);
+                        font-weight: 700;
+                        margin: 0 10px;
+                        font-size: 18px;
+                    }
+                    .item-lista p.nome-produto{
+                        font-family: var(--mulish);
+                        font-size: 18px;
+                        text-align: start;
+                        font-weight: 700;
+                    }
+                .area-lista-itens .total-produtos{
+                    margin: 10px 0;
+                    width: 100%;
+                    height: 45px;
+                    color: var(--bran);
+                    font-size: 18px;
+                    font-weight: 900;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    padding: 15px;
+                    background-color: var(--marr);
+                }
+                .area-lista-itens .limpar-lista{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                }
+                .area-lista-itens .limpar-lista button{
+                    padding: 10px 30px;
+                    background-color: transparent;
+                    border: 2px solid var(--Preto);
+                    border-radius: 10vw;
+                    color: var(--marr);
+                    font-weight: 900;
+                    font-family: var(--mulish);
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                }
+                .area-lista-itens .limpar-lista button:hover{
+                    background-color: var(--marr);
+                    color: var(--bran);
+                    border-color: var(--marr);
+                }
+                .area-lista-itens-sumir{
+                    display: none;
+                }
+
+        .main-fechar-orcamento .section-forms-fechar-orcamento{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+            .section-forms-fechar-orcamento p{
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            /* .section-forms-fechar-orcamento form{
+                
+            } */
+            .section-forms-fechar-orcamento .form-fechar-orcamento{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+                border: 2px solid var(--Preto);
+                border-radius: 35px;
+            }
+            .section-forms-fechar-orcamento form label{
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 30px;
+                width: 100%;
+            }
+            .section-forms-fechar-orcamento form input{
+                margin-top: 10px;
+                box-shadow: none;
+                width: 100%;
+                border: 0;
+                border-bottom: solid 2px var(--Preto);
+                outline: 0;
+                background-color: transparent;
+                transition: 0.3s;
+                color: var(--Preto);
+            }
+            .section-forms-fechar-orcamento form input:hover{
+                border-bottom: 2px solid var(--verm);
+            }
+            .section-forms-fechar-orcamento form input:focus{
+                border-bottom: 2px solid var(--verm);
+            }
+            .section-forms-fechar-orcamento form input::placeholder{
+                color: var(--cinz-bran);
+                font: 15px;
+            }
+            .section-forms-fechar-orcamento form button{
+                width: 100%;
+                height: 30px;
+                padding: 25px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                color: var(--marr);
+                border: 2px solid var(--Preto);
+                border-radius: 10vw;
+                background-color: transparent;
+                cursor: pointer;
+                margin-top: 30px;
+                transition: all 0.3s ease-in-out;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .section-forms-fechar-orcamento form button:hover{
+                background-color: var(--marr);
+                border-color: var(--marr);
+                color: var(--bran);
+            }
+            .section-forms-fechar-orcamento form .div-form{
+                width: 100%;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 45% 45%;
+                gap: 10px;
+                padding: 10px 0;
+            }
+            .section-forms-fechar-orcamento form .div-form-2{
+                grid-template-columns: 10% 35% 44%;
+            }
+
+            .section-forms-fechar-orcamento .area-aviso-orcamento{
+                position: absolute;
+                min-height: 100px;
+                width: 85%;
+                padding: 20px;
+                background-color:#992d2d;
+                display: flex;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 999;
+                border: 2px solid var(--Preto);
+                border-radius: 30px;
+                backdrop-filter: blur(5px);
+                color: var(--bran);
+                font-family: var(--mulish), sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                opacity: 0;
+                animation-name: surgiAreaAviso;
+                animation-duration: 0.3s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+                z-index: 70;
+                top: 100px;
+                /* visibility: hidden; */
+            }
+                @keyframes surgiAreaAviso {
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+                .section-forms-fechar-orcamento .area-aviso-orcamento .aviso{
+                    position: absolute;
+                    top: 20px;
+                    font-weight: 900;
+                }
+                .section-forms-fechar-orcamento .area-aviso-orcamento .btn-sair{
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    cursor: pointer;
+                }
+                .section-forms-fechar-orcamento .area-aviso-orcamento .btn-sair svg{
+                    height: 35px;
+                    stroke: var(--bran);
+                    fill: transparent;
+                    stroke-width: 30px; 
+                    transition: 0.3s;
+                }        
+                .section-forms-fechar-orcamento .area-aviso-orcamento .btn-sair:hover svg{
+                    stroke: var(--cinza);
+                }
+                .section-forms-fechar-orcamento .area-aviso-orcamento .mensagem-aviso{
+                    margin: 30px;
+                    text-align: center;
+                }

@@ -1,0 +1,283 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+@media only screen and (max-width: 400px){
+    main{
+        overflow-x: hidden;
+    }
+    main .section-banner-home .banner-home{
+        height: 85%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    }
+    main .section-sobre-home{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+        align-items: center;
+        justify-content: start;
+        padding: 0 !important;
+        height: auto;
+        width: 100vw !important;
+    }
+    main .section-sobre-home .title-sobre{
+        position: relative;
+        padding: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+    main .section-sobre-home .img-sobre{
+        height: 80vw !important;
+        width: 80vw !important;
+        padding: 0;
+        margin: 20px 0;
+    }
+    main .section-sobre-home .texto-sobre{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    main .section-banner-cadastro{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    main .section-categorias-main-home{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        margin-bottom: 50px;
+    }
+    main .section-categorias-main-home .btn-categoria-home{
+        width: 95%;
+        min-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    main .section-produtos-destaque-home .amostra-produtos-linha{
+        flex-direction: column !important;
+    }
+
+    .amostra-produtos-linha .area-img-produto-destaque{
+        min-height: 90vw !important; max-height: 90vw !important;
+        min-width: 90vw !important; max-width: 90vw !important;
+        border-radius: 10vw;
+    }
+
+    .amostra-produtos-linha .right-amostra-produtos-linha{
+        height: auto;
+        width: 90vw !important;
+    }
+    .right-amostra-produtos-linha .outros-linha{
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+    main .section-banner-home .banner-home{
+        clip-path: polygon(0 0, 100% 0, 110% 80%, 0 100%);
+    }
+    main .banner-home .btns-setinha-banner-home{
+    top: 30vh;
+    }
+    main .btns-setinha-banner-home .btn-setinha-banner{
+        height: 45px;
+        width: 45px;
+    }
+    main .btns-setinha-banner-home .btn-setinha-banner svg{
+        height: 25px;
+    }
+    main .banner-home .btns-bolinha-banner-home .btn-bolinha-banner{
+        height: 12px;
+        width: 12px;
+    }
+    main .saibaMais-banner{
+        margin: 30px 0;
+    }
+    main .section-categorias-main-home{
+        margin-top: 50px;
+        justify-content: space-around;
+    }
+    main .section-categorias-main-home .btn-categoria-home{
+        max-width: 500px;
+        margin: 0 20px;
+    }
+
+    main .section-produtos-destaque-home{
+        min-height: 100vh;
+    }
+    main .section-produtos-destaque-home .amostra-produtos-linha{
+        flex-direction: row;
+    }
+        .amostra-produtos-linha .area-img-produto-destaque{
+            min-height: 42vw; max-height: 42vw;
+            min-width: 42vw; max-width: 42vw;
+        }
+        .amostra-produtos-linha .right-amostra-produtos-linha{
+            height: 100%;
+            width: 50%;
+        }
+        .right-amostra-produtos-linha .outros-linha{
+            position: absolute;
+            top: 52vh;
+            left: -46vw;
+            width: 95vw;
+        }
+            .outros-linha .produtos-outros-linha{
+                max-width: 100%;
+            }
+            .outros-linha .produtos-outros-linha .produto-outro-linha{
+                min-width: 200px;
+                min-height: 200px;
+                border-radius: 5vw;
+            }
+                .produto-outro-linha:hover{
+                    filter: brightness(1);
+                }
+    main .section-sobre-home{
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        padding-bottom: 165px;
+    }
+        .section-sobre-home .title-sobre{
+            margin-top:40px;
+        }
+        .section-sobre-home .main-sobre-home{
+            flex-direction: column-reverse;
+            align-items: start;
+            justify-content: center;
+        }
+            .main-sobre-home p{
+                font-size: 18px;
+            }
+            .main-sobre-home .img-sobre{
+                width: 95% !important;
+                height: 50vw !important;
+                margin: 40px 0;
+            }
+
+    main .section-banner-cadastro{
+        border-radius: 10vw;
+    }
+        .section-banner-cadastro .banner-cadastro{
+            border-radius: 10vw;
+            border: none;
+            width: 100%;
+            background-position: center 35%;
+        }
+            .banner-cadastro i{
+                margin-left: 0;
+            }
+            .banner-cadastro svg{
+                height: 65px !important;
+            }
+            .area-btn-cadastro .btn-cadastro{
+                position: absolute;
+                right: 30px;
+                border-radius: 3.5vw;
+            }
+        
+    
+            
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+/* @media only screen and (min-width: 768px) {
+    
+} */
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (max-width: 992px) {
+    main .section-sobre-home{
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        padding-bottom: 165px;
+    }
+        .section-sobre-home .title-sobre{
+            margin-top:40px;
+        }
+        .section-sobre-home .main-sobre-home{
+            flex-direction: column-reverse;
+            align-items: start;
+            justify-content: center;
+        }
+            .main-sobre-home p{
+                font-size: 18px;
+            }
+            .main-sobre-home .img-sobre{
+                width: 95%;
+                height: 50vw;
+                margin: 40px 0;
+            }
+
+    main .section-banner-cadastro{
+        border-radius: 5vw;
+    }
+        .section-banner-cadastro .banner-cadastro{
+            border-radius: 5vw;
+            border: none;
+            width: 100%;
+            background-position: center 35%;
+        }
+            .banner-cadastro i{
+                margin-left: 30px;
+            }
+            .banner-cadastro svg{
+                height: 80px;
+            }
+            .area-btn-cadastro .btn-cadastro{
+                position: absolute;
+                right: 50px;
+            }
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1920px) {
+    main .section-banner-home{
+        height: 50vh;
+    }
+    main .banner-home .btns-setinha-banner-home{
+        top: 21vh;
+    }
+    main .banner-home .btns-bolinha-banner-home{
+        top: 38vh;
+    }
+
+    main .saibaMais-banner{
+        top: 42vh;
+        right: 2.5vw;
+    }
+
+
+    .amostra-produtos-linha .area-img-produto-destaque{
+        max-height: 500px;min-height: 500px;
+        max-width: 500px;min-width: 500px;
+    }
+    .amostra-produtos-linha .right-amostra-produtos-linha{
+        min-height: auto;
+    }
+
+    main .section-sobre-home{
+        min-height: 50vh;
+        width: 100%;
+    }
+    .section-sobre-home .title-sobre{
+        top: 10vw;
+    }
+
+    .main-sobre-home .img-sobre{
+        max-height: 500px;min-height: 500px;
+        max-width: 500px;min-width: 500px;
+    }
+}

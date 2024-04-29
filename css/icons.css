@@ -1,0 +1,28 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+
+svg{
+    height: 3.5vw;
+    
+}
+
+
+.btn-sair svg{
+    stroke: var(--Preto);
+    fill: var(--bran);
+    stroke-width: 34.016px;
+}
+.btn-sair svg #path1{
+    stroke: var(--Preto);
+    fill: var(--bran);
+}
+.btn-sair svg #path2{
+    stroke: var(--Preto);
+    fill: var(--bran);
+}

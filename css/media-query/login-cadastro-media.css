@@ -1,0 +1,88 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+    .logo-horizontal-vertical{
+        left: 0 !important;
+    }
+    .logo-horizontal-vertical svg{
+        height: 10vw !important;
+    }
+    .area-aviso{
+        min-width: 95vw !important;
+    }
+
+    .section-forms{
+        min-height: 95vh !important;
+        min-width: 95vw !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .area-form{
+        min-width: 50% !important;
+        left: 0 !important;
+        right: 0 !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .form{
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center;
+    }
+    .form input{
+        width: 60vw !important;
+        margin-right: 0 !important;
+    }
+    .form div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;text-align: center;
+    }
+    .form button{
+        background-color: var(--bran);
+    }
+    #form-cadastro .lado-form{
+        margin-right: 0;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    .section-forms .area-form{
+        position: relative;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+        /* border: 1px solid red; */
+        width: 65%;max-width: 65%;
+    }
+}

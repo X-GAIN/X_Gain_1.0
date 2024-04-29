@@ -1,0 +1,52 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+@media only screen and (max-width: 400px){
+    
+}
+
+@media only screen and (max-width: 600px){
+    
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+    main .section-titulo-main{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%) !important;
+    }
+
+    .area-mostrar-produto{
+        flex-direction: column !important;
+    }
+
+    .img-principal{
+        display: none !important;
+    }
+    .section-imgs-rolagem{
+        display: none;
+    }
+    .img-principal-mobile{
+        display: flex !important;
+    }
+    .section-img3d .area-img3d{
+        height: 95vh;
+        max-height: 95vw;
+        width: 95vw;
+    }
+    .area-descricao-btns-adicionar{
+        min-width: 100% !important;max-width: 100% !important;
+        flex-direction: column;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

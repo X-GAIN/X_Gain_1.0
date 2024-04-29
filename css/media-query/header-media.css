@@ -1,0 +1,168 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+@media only screen and (max-width: 400px){
+    header .icon-menu{
+        left: 38vw !important;
+    }
+    header .right-header{
+        right: -5vw !important;
+    }
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    header{
+        flex-direction: row-reverse;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    header .icon-logo{
+        position: absolute;
+        left: 30px;
+    }
+    header .icon-logo svg{
+        height: 25px;
+    }
+    header .right-header{
+        width: 100%;
+        position: absolute;
+        right: -10vw;
+    }
+    header .left-header .icon-menu{
+        margin: 0;
+        position: absolute;
+        left: 40vw;
+    }
+    header .left-header{
+        width: auto;
+
+    }
+    header .icons-header{
+        /* position: absolute;
+        right: 0px; */
+    }
+    header .icons-header svg{
+        height: 28px;
+    }
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+    header .item-header{
+        display: none;
+    }
+    header .icons-header{
+        width: 50%;
+        justify-content: space-between;
+    }
+    header .icon-logo svg{
+        height: 35px;
+    }
+    header .left-header{
+        justify-content: start;
+    }
+
+    header .icon-menu{
+        height: 40px;
+        width: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        left: 7.5vw;
+        z-index: 100;
+    }
+    header .icon-menu i{
+        background-color: var(--bran);
+        height: 4px;
+        width: 35px;
+        display: block;
+        margin-bottom: 5px;
+        border-radius: 1px;
+    }
+
+    .header-mobile{
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        background-color: var(--Preto);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        animation: header-mobile 0.3s ease-in-out forwards;
+    }
+
+    @keyframes header-mobile {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .header-mobile .icon-logo{
+        position: absolute;
+        top: 30px;
+    }
+    .header-mobile .icon-logo svg{
+        fill: transparent;
+        stroke: var(--verm);
+        height: 35px;
+    }
+
+    .header-mobile .btn-sair{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+    .header-mobile .btn-sair svg{
+        fill: transparent;
+        stroke: var(--bran);
+        height: 40px;
+        stroke-width: 30px;
+    }
+
+    .header-mobile .item-header-mobile{
+        margin: 10px;
+    }
+
+    .header-mobile .item-header-mobile a{
+        color: var(--bran);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    .header-mobile{
+        display: none;
+    }
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    
+}

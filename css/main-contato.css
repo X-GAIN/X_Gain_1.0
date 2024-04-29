@@ -1,0 +1,294 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin-top: 100px;
+    min-height: 300px;
+    width: 100%;
+    color: var(--bran);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+main .section-banner-titulo-main{
+    position: relative;
+    min-height: 50vh;
+    width: 100%;
+    background-image: url(../imgs/banner-tela-contato.png);
+    background-color: #848484;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .section-banner-titulo-main h2{
+        position: relative;
+        font-family: var(--mulish), sans-serif ;
+        font-weight: 900;
+        font-size: 30px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-banner-titulo-main h2::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        width: 350px;
+        background-color: var(--bran);
+    }
+
+main .text-avisinho{
+    padding: 4vw;
+    color: var(--cinz-bran);
+}
+
+main .section-contato{
+    width: 100%;
+    padding: 0 4vw;
+    display: flex;
+    align-items: start;
+    justify-self: center;
+    font-family: var(--mulish), sans-serif;
+}
+    .section-contato svg{
+        height: 35px;
+        fill: var(--cinz-bran);
+    }
+    .section-contato a{
+        text-decoration: none;
+        color: var(--cinz-bran);
+        font-family: var(--mulish), sans-serif;
+    }
+    .section-contato .section-info-redes-sociais{
+        width: 40%;
+    }
+        .section-info-redes-sociais .area-info{
+            width: 100%; 
+            margin-bottom: 30px;
+        }
+            .area-info .telefone, .area-info .email a{
+                color: var(--cinz-bran);
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                flex-flow: row nowrap;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            .area-info p{
+                margin-left: 10px;
+                font-size: 16px;
+            }
+            .area-info .telefone p,.area-info .telefone svg, 
+            .area-info .email p,.area-info .email svg{
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .area-info .telefone:hover p,.area-info .telefone:hover svg, .area-info .email:hover p,.area-info .email:hover svg{
+                fill: var(--verm);
+                color: var(--verm);
+            }
+            .area-info .email:hover p{
+                text-decoration: underline;
+            }
+            
+        .section-info-redes-sociais .area-redes-sociais{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+            .area-redes-sociais h2{
+                margin-bottom: 15px;
+            }
+            .area-redes-sociais a{
+                margin-left: 15px;
+            }
+            .area-redes-sociais svg{
+                transition: all 0.3s ease-in-out;
+            }
+            .area-redes-sociais a:hover svg{
+                fill: var(--verm);
+            }
+
+    .section-contato .section-forms-contato{
+        position: relative;
+        width: 60%;
+        min-height: 500px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-flow: column;
+        border: 2px solid var(--bran);
+        margin-bottom: 50px;
+        border-radius: 30px;
+        padding: 45px;
+    }
+        .section-forms-contato form{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            width: 100%;
+            height: 100%;
+        }
+        .section-forms-contato form label{
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 30px;
+            width: 100%;
+        }
+        .section-forms-contato form input{
+            margin-top: 10px;
+            box-shadow: none;
+            width: 100%;
+            border: 0;
+            border-bottom: solid 2px var(--bran);
+            outline: 0;
+            background-color: transparent;
+            transition: 0.3s;
+            color: var(--bran);
+        }
+        .section-forms-contato form input:hover{
+            border-bottom: 2px solid var(--verm);
+        }
+        .section-forms-contato form input:focus{
+            border-bottom: 2px solid var(--verm);
+        }
+        .section-forms-contato form input::placeholder{
+            color:#d9dbda56;
+            font: 15px;
+        }
+
+        .section-forms-contato form textarea{
+            min-height: 300px;
+            max-width: 100%;min-width: 100%;
+            background-color: transparent;
+            border: 2px solid var(--bran);
+            border-radius: 10px 40px 40px 40px;
+            padding: 20px;
+            font-family: var(--mulish), sans-serif;
+            color: var(--bran);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        .section-forms-contato form textarea:hover{
+            border: 2px solid var(--verm);
+        }
+        .section-forms-contato form textarea:focus{
+            border: 2px solid var(--verm);
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+        .section-forms-contato form textarea::placeholder{
+            color:#d9dbda56;
+            font: 15px;
+        }
+        .section-forms-contato form textarea::-webkit-scrollbar{
+            display: none;
+        }
+
+        .section-forms-contato form button{
+            width: 100%;
+            height: 30px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: var(--verm);
+            border: 2px solid var(--bran);
+            border-radius: 10vw;
+            background-color: transparent;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease-in-out;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .section-forms-contato form button:hover{
+            background-color: var(--verm);
+            border-color: var(--verm);
+            color: var(--bran);
+        }
+
+        .section-forms-contato .area-aviso-contato{
+            position: absolute;
+            min-height: 100px;
+            width: 95%;
+            padding: 20px;
+            background-color:#992d2d;
+            display: flex;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            border: 2px solid var(--bran);
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            color: var(--bran);
+            font-family: var(--mulish), sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            opacity: 0;
+            animation-name: surgiAreaAviso;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            z-index: 70;
+
+            /* visibility: hidden; */
+        }
+            @keyframes surgiAreaAviso {
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            .section-forms-contato .area-aviso-contato .erro{
+                position: absolute;
+                top: 20px;
+                font-weight: 900;
+            }
+            .section-forms-contato .area-aviso-contato .btn-sair{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+            }
+            .section-forms-contato .area-aviso-contato .btn-sair svg{
+                height: 35px;
+                stroke: var(--bran);
+                fill: transparent;
+                stroke-width: 30px; 
+                transition: 0.3s;
+            }        
+            .section-forms-contato .area-aviso-contato .btn-sair:hover svg{
+                stroke: var(--cinza);
+            }
+            .section-forms-contato .area-aviso-contato .aviso{
+                margin: 30px;
+                text-align: center;
+            }

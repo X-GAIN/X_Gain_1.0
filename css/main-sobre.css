@@ -1,0 +1,109 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin-top: 100px;
+    min-height: 300px;
+    width: 100%;
+    color: var(--bran);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+main .section-banner-titulo-main{
+    min-height: 50vh;
+    width: 100%;
+    background-image: url(../imgs/banner-tela-sobre.png);
+    background-color: #848484;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    .section-banner-titulo-main h2{
+        font-family: var(--audiowide), sans-serif ;
+        font-weight: normal;
+        font-size: 30px;
+        margin: 10px;
+    }
+    .section-banner-titulo-main .icon-logo-sobre{
+        margin: 10px;
+    }
+        .icon-logo-sobre svg{
+            height: 45px;
+            fill: var(--bran);
+            stroke: var(--bran);
+            stroke: none;
+        }
+
+main .section-sobre-nos{
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    .section-sobre-nos p{
+        padding: 20px 5vw;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    .section-sobre-nos h2{
+        position: relative;
+        font-size: 30px;
+        font-weight: 900;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-sobre-nos h2::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        height: 4px;
+        width: 100%;
+        background-color: var(--bran);
+    }
+    .section-sobre-nos .area-como{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    
+    .section-sobre-nos .area-bem-vindo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .area-bem-vindo h2{
+            color: var(--verm);
+        }
+        .area-bem-vindo h2::after{
+            background-color: var(--verm);
+        }
+

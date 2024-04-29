@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <style>
+    .multiselect {
+      width: 200px;
+    }
+
+    .selectBox {
+      position: relative;
+    }
+
+    .selectBox select {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .overSelect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #checkboxes {
+      display: none;
+      border: 1px solid #ccc;
+    }
+
+    #checkboxes label {
+      display: block;
+    }
+
+    #checkboxes label:hover {
+      background-color: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="multiselect">
+  <div class="selectBox" onclick="showCheckboxes()">
+    <select>
+      <option>Selecione opções</option>
+    </select>
+    <div class="overSelect"></div>
+  </div>
+  <div id="checkboxes" class="checkboxes">
+    <label for="opcao1">
+      <input type="checkbox" id="opcao1" />Opção 1</label>
+    <label for="opcao2">
+      <input type="checkbox" id="opcao2" />Opção 2</label>
+    <label for="opcao3">
+      <input type="checkbox" id="opcao3" />Opção 3</label>
+    <!-- Adicione mais opções conforme necessário -->
+  </div>
+</div>
+
+<script>
+  function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (checkboxes.style.display == "none") {
+      checkboxes.style.display = "block";
+    } else {
+      checkboxes.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

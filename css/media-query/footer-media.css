@@ -1,0 +1,74 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+    footer{
+        align-items: center;
+        justify-content: center;
+    }
+    footer .start-footer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    footer .start-footer .sobre-footer{
+        width:80%;
+    }
+    footer .start-footer .media-contato-footer{
+        width: 90%;
+        margin-top: 20px;
+    }
+    footer i:hover svg{
+        fill: var(--cinza);
+        stroke: var(--cinza);
+    }
+    footer a:hover svg{
+        fill: var(--cinza);
+        stroke: var(--cinza);
+    }
+    footer svg:hover{
+        fill: var(--cinza);
+    }
+    footer a:hover{
+        color: var(--Preto);
+        text-decoration: none;
+    }
+
+    footer .fone-footer:hover p, footer .fone-footer:hover i, 
+    footer .email-footer:hover a, footer .email-footer:hover i{
+    color: var(--preto);
+    fill: var(--Preto);
+}
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    
+}

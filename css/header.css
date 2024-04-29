@@ -1,0 +1,391 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--bran);
+    border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
+[aria-label]{
+    position: relative;
+}
+[aria-label]::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top:45px;
+    padding: 10px;
+    z-index: 5000;
+    font-style: normal;
+    font-size: 15px;
+    color: var(--bran);
+    background-color: var(--cinza);
+    border-radius: 0.9vw;
+    /* border: solid 1px var(--bran); */
+}
+[aria-label]:hover::after {
+    display: block;
+    }
+
+#topo-pagina{
+    position: absolute;
+    top: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--Preto);
+    max-width: 100vw;
+    font-family: var(--mulish), sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+
+header{
+    background-color: var(--Preto);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mulish), sans-serif;
+    font-weight: 700;
+    z-index: 80;
+}
+
+/* header .animationHeader{
+    height: 55px;
+    animation: animationHeader 0.5s ease-in-out forwards;
+} */
+
+header .icons-header svg{
+    fill: var(--bran);
+    transition: 0.2s;
+    height: 35px;
+}
+header .icons-reduzidos svg{
+    height: 25px;
+}
+header svg:hover{
+    fill: var(--verm);
+}
+
+header .icon-logo{
+    position: relative;
+    z-index: 100;
+}
+header .icon-logo svg{
+    fill: transparent;
+    stroke: var(--verm);
+    height: 45px;
+    transition: 0.3s;
+}
+header .icon-logo-reduzido svg{
+    height: 35px;
+}
+header .icon-logo:hover svg, #icon-carrinho:hover svg{
+    fill: var(--verm);
+    stroke: transparent;
+}
+
+header .icons-header i{
+    margin: 15px;
+}
+
+header .icons-header{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+header .icon-perfil svg{
+    height: 55px;
+}
+header .icon-perfil-reduzido svg{
+    height: 35px;
+}
+
+header .left-header, .right-header{
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;  
+}
+header .item-header, .icons-header{
+    cursor: pointer;
+}
+header .item-header a{
+    color: var(--bran);
+    text-decoration: none;
+    transition: 0.2s;
+    position: relative;
+    font-size: 15px;
+    z-index: 90;
+}
+header .item-header-reduzido a{
+    font-size: 13px;
+}
+
+header .item-header:hover a{
+    color: var(--verm);
+}
+#icon-carrinho{
+    position: relative;
+}
+#icon-carrinho .qtd-carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--bran);
+    min-height: 16px;
+    min-width: 16px;
+    padding: 1px;
+    border-radius: 5px;
+    color: var(--Preto);
+    top: -7px;
+    right: -10px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+#icon-carrinho:hover .qtd-carrinho{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+
+header .left-header .item-header .list-itens-header {
+    position: absolute;
+    top: 0;
+    display:none;
+    
+}
+header .left-header .item-header .list-itens-header ul {
+    position: relative;
+    top: 25px;
+    padding: 10px;
+    width: 160px;
+    border: solid 2.8px var(--bran);
+    border-radius: 5px 20px 20px 20px;
+    transition: 0.5s;
+    background-color:#0d0d0dcb;
+    backdrop-filter: blur(2px);
+    height: auto;
+}
+
+header .left-header .item-header .list-itens-header li{
+    list-style: none;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+header .left-header .item-header .list-itens-header a{
+    color: var(--bran);    
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .item-header:hover .list-itens-header{
+    display: flex;
+}
+header .left-header .item-header:hover .list-itens-header ul{
+    animation-name: lista-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+header .left-header .item-header:hover #list-musculacao ul{
+    animation-name: lista-animation-musculacao;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+header .left-header .item-header:hover .list-itens-header a{
+    animation-name: lista-itens-animation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+header .left-header .item-header .list-itens-header a:hover{
+    color: var(--verm);
+    
+}
+
+
+
+
+
+header .area-list-perfil {
+    position: absolute;
+    top: 0;
+    display:none;
+}
+header .header-perfil:hover .area-list-perfil {
+    display: block;
+}
+header .header-perfil:hover .icon-perfil svg {
+    fill: var(--verm);
+}
+header .area-list-perfil ul {
+    position: relative;
+    top: 50px;
+    right: 110px;
+    padding: 10px;
+    width: 150px;
+    border: solid 2.8px var(--bran);
+    border-radius: 20px 5px 20px 20px;
+    transition: 0.5s;
+    background-color:#0d0d0dcb;
+    backdrop-filter: blur(2px);
+    height: 0;
+}
+
+header .area-list-perfil li{
+    list-style: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: end;
+    color: var(--bran);    
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .area-list-perfil a{
+    color: var(--bran);    
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .header-perfil:hover ul{
+    animation-name: lista-perfil-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+header .header-perfil:hover li, header .header-perfil:hover a{
+    animation-name: lista-itens-animation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+header .area-list-perfil li:hover, header .area-list-perfil a:hover{
+    color: var(--verm);
+}
+
+header .nao-logado{
+    display: block;
+}
+header .logado{
+    display: none;
+    animation-name: lista-perfil-animation2 !important;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.logo-horizontal-vertical svg{
+    width: 15vw;
+    fill: var(--verm);
+    transition: 0.3s;
+}
+.logo-horizontal-vertical:hover svg{
+    fill:#7a2121;
+}
+                                        /* Animation */
+
+header-animation{
+    max-width: 50px;
+}
+
+@keyframes lista-animation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 102px;
+    }
+}
+@keyframes lista-perfil-animation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 80px;
+    }
+}
+@keyframes lista-perfil-animation2 {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100px;
+    }
+}
+@keyframes lista-animation-musculacao {
+    from{
+        height: 0;
+    }
+    to{
+        height: 178px;
+    }
+}
+@keyframes lista-itens-animation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animationHeader {
+    from{
+        height: 75px;
+    }
+    to{
+        height: 55px;
+    }
+}

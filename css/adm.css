@@ -1,0 +1,623 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--Preto);
+    border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
+.section-geral::-webkit-scrollbar-button{
+    padding: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bran);
+    max-width: 100vw;
+    font-family: var(--mulish), sans-serif;
+}
+
+header{
+    min-height: 55px;
+    background-color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bran);
+    padding: 0 35px;
+    font-size: 16px;
+}
+header p{
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+header a{
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: var(--bran);
+}
+header p:hover, header a:hover{
+    color: #992d2d;
+}
+
+header svg{
+    height: 35px;
+    fill: transparent;
+    stroke: var(--bran);
+    transition: all 0.2s ease-in-out;
+}
+header svg:hover{
+    fill: var(--bran);
+}
+
+footer{
+    min-height: 100px;
+    background-color: var(--Preto);
+    display: flex;
+    flex-flow: column;
+    color: var(--cinz-bran);
+    align-items: center;
+    justify-content: center;
+}
+footer svg{
+    height: 35px;
+    fill: var(--cinza);
+    stroke: var(--cinza);
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer i:hover svg{
+    fill: var(--verm);
+    stroke: var(--verm);
+}
+
+
+/* ************************************* MAIN ********************************** */
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 35px;
+}
+
+main .section-geral{
+    position: relative;
+    width: 100%;
+    /* min-height: 80vh; */
+    /* background-color:rgb(175, 175, 175); */
+    margin-bottom: 20px;
+    border: 2px solid var(--Preto);
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    height: 100vh;
+    overflow-y: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.section-geral button{
+    margin: 0 10px;
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--Preto);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: var(--mulish), sans-serif;
+    cursor: pointer;
+    color: var(--Preto);
+    transition: all 0.2s ease-in-out;
+}
+.section-geral button:hover{
+    background-color: var(--Preto);
+    color: var(--bran);
+    border: 2px solid var(--Preto);
+}
+
+.section-geral h2{
+    font-weight: 900;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+.section-geral .menu-sections{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.section-geral .lista{
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+}
+.lista .item-produto{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: solid 2px var(--Preto);
+}
+.item-produto img{
+    height: 80px;
+    border-radius: 20px;
+}
+
+main .section-banner .area-mostrar-banner{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-imgsBanner{
+    max-width: 70%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.area-imgsBanner .imgsBanner{
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.area-imgsBanner .banner-img{
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.area-imgsBanner .area-btns-bolinhas-banner{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+}
+.area-btns-bolinhas-banner .btn-bolinha-banner{
+        height: 10px;
+        width: 10px;
+        background-color: var(--bran);
+        border: 2px solid var(--bran);
+        border-radius: 100%;
+        transition: 0.2s;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .area-btns-bolinhas-banner .btn-bolinha-banner:hover{
+        background-color: var(--verm);
+        border: var(--verm);
+    }
+    .area-btns-bolinhas-banner .banner-foco{
+        background-color: var(--verm);
+        border: var(--verm);
+    }
+
+/* *************************** Section Produtos ***************************** */
+
+.section-adicionar-produto{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0d0d0dde;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+
+.section-adicionar-produto .area-adicionar-produto{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: var(--bran);
+    border: 2px solid var(--Preto);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-sair{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
+}
+.btn-sair svg {
+    height: 40px;
+    stroke: var(--Preto);
+    fill: transparent;
+    stroke-width: 30px;
+    transition: all 0.2s ease-in-out;
+}
+.btn-sair svg:hover{
+    stroke: var(--verm);
+}
+
+.area-forms{
+    width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-y: auto;
+    padding: 10px 50px;
+}
+.area-forms::-webkit-scrollbar-button{
+    margin: 20px;
+}
+.area-forms form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+form label{
+    font-size: 18px;
+    font-family: var(--mulish), sans-serif;
+    font-weight: 600;
+}
+form input{
+    border: none;
+    border-bottom: 2px solid var(--Preto);
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--mulish), sans-serif;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+}
+form input[type=file]{
+    border: transparent;
+    display: none;
+}
+form .file{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--Preto);
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+form .file:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+
+form textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    font-size: 16px;
+    color: var(--Preto);
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid var(--Preto);
+    font-family: var(--mulish), sans-serif;
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+form select{
+    padding: 5px;
+    border: 2px solid var(--Preto);
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: var(--mulish), sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+form select option{
+    border-radius: 25px;
+    background-color: var(--bran);
+    color: var(--Preto);
+    font-family: var(--mulish), sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+form input:focus, .area-forms textarea:focus{
+    outline: none;
+    border-color: var(--verm);
+}
+
+form button{
+    padding: 20px 0;
+    border: 2px solid var(--Preto);
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    font-weight: 900;
+    font-family: var(--mulish), sans-serif;
+    margin-top: 10px;
+}
+form button:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+
+#btn-remove-file{
+    margin: 0 20px;
+    font-size: 10px;
+    padding: 10px;
+}
+#arquivosSelecionados, #nome3DSelecionado, #bannerAdicionado{
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: var(--mulish), sans-serif;
+    color: var(--Preto);
+    font-weight: 600;
+}
+
+
+/* ******************* Section Usuario ******************** */
+
+.section-adicionar-usuario{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0d0d0dde;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+.area-adicionar-usuario{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: var(--bran);
+    border: 2px solid var(--Preto);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.senha-usuario{
+    width: 100%;
+    position: relative;
+}
+.icon-mostrar-senha{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.icon-mostrar-senha svg{
+    fill: var(--Preto);
+    transition: all 0.2s ease-in-out;
+}
+.icon-mostrar-senha:hover svg{
+    fill: var(--verm);
+}
+.area-aviso{
+    position: absolute;
+    min-height: 100px;
+    width: 60%;
+    margin-top: 35px;
+    padding: 20px;
+    background-color:#992d2d;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 2px solid var(--Preto);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    color: var(--bran);
+    font-family: var(--mulish), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0;
+    animation-name: surgiAreaAviso;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 70;
+}
+    @keyframes surgiAreaAviso {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .area-aviso .erro{
+        /* position: absolute; */
+        /* top: 20px; */
+        font-weight: 900;
+    }
+    .area-aviso .btn-sair{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .area-aviso .btn-sair svg{
+        stroke: var(--bran);
+    }
+    .area-aviso .btn-sair svg:hover{
+        stroke: var(--cinz-bran);
+    }
+
+
+/* ********************* Section adicionar Banner ************************* */
+
+.adicionar-banner{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    /* border: 1px solid red; */
+    z-index: -1;
+    opacity: 0;
+    background-color:#d9dbda8e;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+}
+.adicionar-banner button{
+    width: 100%;
+    background-color: var(--bran);
+    margin: 0;
+    margin-top: 15px;
+}
+.adicionar-banner button:hover{
+    background-color: var(--verm);
+}
+.adicionar-banner #adicionarBannerLabel{
+    width: 50vw;
+    height: 100px;
+    background-color: var(--bran);
+    display: flex;
+    border: 2px solid var(--Preto);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+#adicionarBannerLabel:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+
+#area-aviso-excluir-banner button{
+    margin-top: 15px;
+    border-color: var(--bran);
+    color: var(--bran);
+}
+#excluir-usuario, #excluir-produto{
+    padding: 10px 20px;
+    border: 2px solid var(--bran);
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    font-weight: 900;
+    font-family: var(--mulish), sans-serif;
+    margin-top: 15px;
+    border-color: var(--bran);
+    color: var(--bran);
+}
+#area-aviso-excluir-banner button:hover, #excluir-usuario:hover,  #excluir-produto:hover{
+    color: var(--verm);
+    background-color: var(--bran);
+}
+
+/* Estilos para a caixa de seleção múltipla */
+.multiselect {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    display: none;
+  }
+  
+  .overSelect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 5px;
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+  
+  #checkboxes label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #f3f3f3;
+  }
+  
+form input[type=submit]:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+form button:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}

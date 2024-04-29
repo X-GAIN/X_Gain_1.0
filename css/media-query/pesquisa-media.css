@@ -1,0 +1,74 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+    #pesquisa-section-iframe iframe{
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        z-index: 100;
+    }
+    .section-pesquisa{
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        z-index: 100;
+    }
+
+    .section-pesquisa .area-pesquisa{
+        height: 95%;
+        width: 95%;
+        border-radius: 5vw;
+    }
+
+    .section-pesquisa .area-pesquisa .barra-pesquisa{
+        top: 60px;
+    }
+
+    .section-pesquisa .area-pesquisa .barra-pesquisa button{
+        min-width: 45px;
+    }
+
+    .section-pesquisa .area-pesquisa .resultado-pesquisa{
+        top: 120px;
+    }
+
+    .section-pesquisa .btn-sair{
+        top: 15px;
+        right: 15px;
+    }
+
+    .barra-pesquisa input{
+        width: 90% !important;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    
+}

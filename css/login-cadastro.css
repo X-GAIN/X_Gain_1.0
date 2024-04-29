@@ -1,0 +1,297 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+section.forms-login-cadastro{
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#0d0d0dcb;
+    backdrop-filter: blur(2px);
+    animation-name: surgiDaAreaDelogin-cadastro;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+    .forms-login-cadastro .area-aviso{
+        position: absolute;
+        min-height: 100px;
+        min-width: 20vw;
+        padding: 20px;
+        background-color:#992d2d;
+        display: flex;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        border: 2px solid var(--bran);
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
+        color: var(--bran);
+        font-family: var(--mulish), sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        opacity: 0;
+        animation-name: surgiAreaAviso;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        z-index: 70;
+    }
+        @keyframes surgiAreaAviso {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .area-aviso .erro{
+            position: absolute;
+            top: 20px;
+            font-weight: 900;
+        }
+        .area-aviso .btn-sair{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+        .btn-sair svg{
+            height: 35px;
+            stroke: var(--bran);
+            fill: transparent;
+            stroke-width: 30px; 
+            transition: 0.3s;
+        }        
+        .btn-sair:hover svg{
+            stroke: var(--cinza);
+        }
+        .area-aviso .aviso{
+            margin: 30px;
+            text-align: center;
+        }
+
+    .forms-login-cadastro .section-forms{
+        position: relative;
+        min-height: 80vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        background-color: var(--Preto);
+        background-image: url(../imgs/banner-cadastro-login.png);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        border-radius: 3vw;
+        border: 2px solid var(--bran);
+        overflow-y: auto;
+
+
+        color: var(--bran);
+        font-family: var(--mulish), sans-serif;
+        
+    }
+
+    @keyframes surgiDaAreaDelogin-cadastro {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+        .section-forms .logo-horizontal-vertical{
+            position: relative;
+            margin: 6vw 0 3.5vw 0;
+            left: 3.5vw;
+        }
+        .logo-horizontal-vertical svg{
+            width: 200px;
+            fill: var(--verm);
+            transition: 0.3s;
+        }
+        .logo-horizontal-vertical:hover svg{
+            fill:#7a2121;
+        }
+        .section-forms .area-form{
+            position: relative;
+            left: 3.5vw;
+            display: flex;
+            flex-direction: column;
+            min-height: 50vh;
+            /* border: 1px solid red; */
+            width: 75%;max-width: 75%;
+        }
+            .area-form h2{
+                font-size: 22px;
+                font-weight: 900;
+                margin-bottom: 20px;
+            }
+            .area-form .form{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }       
+                .form label{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-top: 12px;
+                    width: 100%;
+                }
+                .form input{
+                    margin-top: 5px;
+                    box-shadow: none;
+                    width: 20vw;
+                    border: 0;
+                    border-bottom: solid 2px var(--bran);
+                    outline: 0;
+                    background-color: transparent;
+                    transition: 0.3s;
+                    color: var(--bran);
+                }
+                .form input:hover{
+                    border-bottom: 2px solid var(--verm);
+                }
+                .form input:focus{
+                    border-bottom: 2px solid var(--verm);
+                }
+                .form input::placeholder{
+                    color:#d9dbda56;
+                    font: 15px;
+                }
+                .form div{
+                    width: 20vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .form button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 30px;
+                    width: 70%;
+                    height: 40px;
+                    background-color: transparent;
+                    border: solid 2px var(--bran);
+                    border-radius: 20px;
+                    color: var(--verm);
+                    font-weight: 700;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                .form button:hover{
+                    color: var(--bran);
+                    background-color: var(--verm);
+                    border: transparent;
+                }
+                .form p{
+                    color: #d9dbda56;
+                    margin-top: 12px;
+                    font-size: 15px;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    margin-bottom: 3.5vw;
+                }
+                .form p:hover{
+                    color: var(--cinz-bran);
+                }
+
+            .area-form #form-cadastro{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+                #form-cadastro .lado-form{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 3.5vw;
+                }
+            .area-form #form-login button{
+                width: 60%;
+            }
+
+.section-forms .btn-sair{
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+}
+.section-forms .btn-sair svg{
+    height: 35px;
+    fill: transparent;
+    stroke: var(--bran);
+}
+.section-forms .btn-sair:hover svg{
+    stroke: var(--verm);
+}
+
+/* .section-login-cadastro .btn-sair-login-section{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.section-login-cadastro .btn-sair-login-section svg{
+    height: 35px;
+    fill: transparent;
+    stroke: var(--bran);
+} */
+
+.section-login-cadastro iframe{
+    max-width:100vw;
+    min-width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.section-login-cadastro{
+    display: none;
+}
+
+
+.senha{
+    display: flex;
+    position: relative;
+}
+.senha .icon-mostrar-senha{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.icon-mostrar-senha svg{
+    fill: var(--bran);
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-mostrar-senha:hover svg{
+    fill: var(--verm);
+}
